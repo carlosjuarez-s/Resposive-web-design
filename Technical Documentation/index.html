@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <header>CSS Documentation</header>
+        <li><a href="#what_is_css?" class="nav-link">What is CSS?</a></li>
+        <li><a href="#selector" class="nav-link">Selector</a></li>
+        <li><a href="#declaration" class="nav-link">Declaration</a></li>
+        <li><a href="#properties" class="nav-link">Properties</a></li>
+        <li><a href="#property_value" class="nav-link">Property value</a></li>
+        <li><a href="#selecting_multiple_elements" class="nav-link">Selecting multiple elements</a></li>
+        <li><a href="#reference" class="nav-link">Reference</a></li>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="what_is_css?">
+            <header>What is CSS?</header>
+            <p>
+                Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:
+            </p>
+            <code>
+                p {
+                    color: red;
+                  }
+            </code>
+            <code>
+                p {
+                    color: blue;
+                  }
+            </code>
+            <code>
+                p {
+                    color: green;
+                  }
+            </code>
+            <p>
+                Let's try it out! Using a text editor, paste the three lines of CSS (above) into a new file. Save the file as style.css in a directory named styles.
+            </p>
+            <p>
+                To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML. (If you haven't been following our project, pause here to read Dealing with files and HTML basics.)
+            </p>
+            <ul>
+                <li>Open your index.html file. Paste the following line in the head (between the <head> and </head> tags):
+                    <code>
+                        link href="styles/style.css" rel="stylesheet"
+                    </code>
+                </li>
+                <li>
+                    Save index.html and load it in your browser. You should see something like this:
+                </li>
+            </ul>
+        </section>
+        <section class="main-section" id="selector">
+            <header>Selector</header>
+            <p>
+                This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example, <p> elements). To style a different element, change the selector.
+            </p>
+        </section>
+        <section class="main-section" id="declaration">
+            <header>Declaration</header>
+            <p>
+                This is a single rule like color: red;. It specifies which of the element's properties you want to style.
+            </p>
+        </section>
+        <section class="main-section" id="properties">
+            <header>Properties</header>
+            <p>
+                These are ways in which you can style an HTML element. (In this example, color is a property of the <p> elements.) In CSS, you choose which properties you want to affect in the rule.
+            </p>
+        </section>
+        <section class="main-section" id="property_value">
+            <header>Property value</header>
+            <p>
+                To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many color values in addition to red.)
+            </p>
+            <ul>
+                <li>Apart from the selector, each ruleset must be wrapped in curly braces. ({})</li>
+                <li>Within each declaration, you must use a colon (:) to separate the property from its value or values.</li>
+                <li>Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="selecting_multiple_elements">
+            <header>Selecting multiple elements</header>
+            <p>
+                You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:
+            </p>
+            <code>
+                p, li, h1 {
+                    color: red;
+                  }
+            </code>
+        </section>
+        <section class="main-section" id="reference">
+            <header>Reference</header>
+            <p>
+                Reference: <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">link</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>

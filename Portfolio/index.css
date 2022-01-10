@@ -1,0 +1,304 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 3em;
+}
+
+#navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    background-color: #010014;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.63);
+}
+
+#navbar li {
+    list-style: none;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    
+}
+
+#navbar li a:hover{
+    border-bottom: 1px solid #6969f3;
+    border-width: 3px;
+    animation-name: nav;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav {
+    0% {
+        border-bottom: 1px solid #6969f3;
+        border-width: 1px;
+    }
+
+    100% {
+        border-bottom: 1px solid #6969f3;
+        border-width: 3px;
+    }
+}
+
+main {
+    position: static;
+    width: 100%;
+}
+
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(45rad, #0F0FC7, #00006A);
+    width: 100%;
+    height: 100vh;
+}
+
+#welcome-section header {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#welcome-section header h1 {
+    font-size: 45px;
+    animation-name: welcome-h1;
+    animation-duration: 900ms;
+    text-shadow: 3px 1px rgba(0, 0, 0, 0.438);
+}
+
+
+#welcome-section header h3 {
+    font-style: italic;
+    font-weight: 350;
+    font-size: 30px;
+    animation-name: welcome-h3;
+    animation-duration: 800ms;
+    text-shadow: 5px 4px rgba(0, 0, 0, 0.822);
+}
+
+@keyframes welcome-h1 {
+    0%{
+        margin-bottom: 20px;
+        opacity: 0.1;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes welcome-h3 {
+    0%{
+        margin-top: 20px;
+        opacity: 0.1;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}
+
+
+#about-me {
+    background-color: #D9EAF0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#about-me header {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #0F0FC7;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.171);
+}
+
+#about-me p {
+    text-align: justify;
+    width: 50%;
+}
+
+#projects {
+    background: linear-gradient(45rad, #0F0FC7, #00006A);
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding-bottom: 20px;
+}
+
+#projects header {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 1px rgba(0, 0, 0, 0.438);
+}
+
+#projects-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-self: center;
+}
+
+@media (max-width: 700px) {
+    #projects-box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+#projects-box a {
+    text-decoration: none;
+    width: fit-content;
+}
+
+.project-card {
+    display: flex;
+    position: static;
+    align-items: center;
+    background-color: #010014;
+    width: fit-content;
+    margin: 20px 60px 15px 60px;
+    border: 1.5px solid #00000000;
+}
+
+.project-card:hover {
+    animation-name: card;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes card {
+    100% {
+        border: 1.5px solid #6969f3;
+    }
+}
+
+.project-tile img {
+    width: 300px;
+    height: 200px;
+}
+
+.project-tile h3 {
+    color: white;
+    text-align: center;
+}
+
+#btn-projects {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px 20px 10px 20px;
+    background-color: #010014;
+    border-style: none;
+    border-radius: 3px;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+#btn-projects:hover {
+    animation-name: btn;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btn {
+    100% {
+        transform: scale(1.1);
+        background-color: #D9EAF0;
+        color: black;
+    }
+}
+
+
+#contact {
+    background-image: url();
+    background-color: #D9EAF0;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding-bottom: 30px;
+}
+
+#contact header {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 3px 1px rgba(0, 0, 0, 0.144);
+}
+
+#contact h3 {
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.774);
+}
+
+#text-contact {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#social-medias {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+#social-medias a {
+    text-decoration: none;
+    color: #0F0FC7;
+}
+
+#social-medias a:hover {
+    animation-name: social;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes social {
+    100% {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.445);
+    }
+}
+
+footer {
+    display: flex;
+    background-color: black;
+    height: 150px;
+}
+
+footer p {
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-style: italic;
+}

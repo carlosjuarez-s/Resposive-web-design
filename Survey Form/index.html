@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="title">Partner registration</h1>
+        <p id="description">
+            Thanks for your interest in the Bokk Library. Enter your data in the corresponding fields to be able to be registered!
+        </p>
+    </header>
+    <form id="survey-form" action="">
+        <label for="name" id="name-label">Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+        <label for="email" id="email-label">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" required>
+        <label for="number" id="number-label">Number</label>
+        <input id="number" type="number" placeholder="Enter your number" min="0" max="9999999999">
+        <div>
+            <label for="">Select your plan</label>
+            <select name="food" id="dropdown">
+                <option value="pizza">Basic</option>
+                <option value="pasta">Basic Plus</option>
+                <option value="burger">Premium</option>
+                <option value="apple">Gold</option>
+            </select>
+        </div>
+        <div class="options-group">
+            <p>How often will you visit the library?</p>
+            <label>
+                <input name="visited" type="radio" value="three days a week">
+                Three days a week
+            </label>
+            <label>
+                <input name="visited" type="radio" value="four days a week">
+                Four days a week
+            </label>
+            <label>
+                <input name="visited" type="radio" value="every day">
+                Every day
+            </label>
+        </div>
+        <div class="options-group">
+            <p>which genres are you interested in?</p>
+            <label for="">
+                <input type="checkbox" name="genres" value="fantasy">
+                Fantasy
+            </label>
+            <label for="">
+                <input type="checkbox" name="genres" value="horror">
+                Horror
+            </label>
+            <label for="">
+                <input type="checkbox" name="genres" value="sci-fi">
+                Sci-Fi
+            </label>
+            <label for="">
+                <input type="checkbox" name="genres" value="other">
+                Other
+            </label>
+        </div>
+        <div id="text-area">
+            <label for="textArea-label">Comment</label>
+            <textarea name="comment" id="commnet" cols="30" rows="10"></textarea>
+        </div>  
+        
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>

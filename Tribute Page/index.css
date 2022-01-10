@@ -1,0 +1,94 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(45deg, #0788D9, #F22259);
+}
+
+header h4 {
+    color: white;
+    font-weight: 200;
+}
+
+#title {
+    color: white;
+    font-weight: 400;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(202, 201, 201);
+}
+
+#image {
+    height: auto;
+    width: 500px;
+    max-width: 100%;
+    margin: 5px 0px 5px 0px;
+}
+
+#img-caption {
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 60%;
+}
+
+#tribute-info {
+    background: linear-gradient(180deg, #0788D9, #F22259);
+    display: flex;
+    justify-content: center;
+}
+
+#tribute-info article {
+    width: 50%;
+    align-items: center;
+    background: white;
+    padding: 0px 20px 0px 20px;
+}
+
+#tribute-link {
+    text-decoration: none;
+    color: indigo;
+}
+
+
+@media (max-width: 530px) {
+    #image {
+        height: auto;
+        max-width: 100%;
+    }
+
+    #img-caption {
+        font-size: 10px;
+    }
+
+    #title{
+        font-size: 15px;   
+    }
+
+    header h4 {
+        font-size: 12px;
+    }
+
+    #tribute-info{
+        font-size: small;
+    }
+
+    #tribute-info article{
+        width: 80%;
+    }
+}
